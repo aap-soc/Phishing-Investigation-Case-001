@@ -9,15 +9,17 @@ email authentication failed, and the link was hidden behind a Google redirect le
 compromised mailbox at a real organisation. Verdict: malicious.
 
 ## Email details
-|    Field       |                  Value                            |
-|----------------|---------------------------------------------------|
-| From           | Stellar Foundation <herb@southernheritagecc[.com> |
-| Subject        |        Earn XLM by staking your assets            |
-| Date (UTC)     |          Sat 10 Sep 2022, 12:35:20                |
-| Sending server | nmtao101.oxsus-vadesecure[.]net - 135.148.117.232 |
-| Origin IP      |                45.82.85.109                       |
-| X-Mailer       |     PHPMailer 6.1.7 (bulk-mail script)            |
-| Message-ID     |   ends @DESKTOP-RQ5VPH2 (a personal Windows PC)   |
+|    Field       |                  Value                             |
+|----------------|----------------------------------------------------|
+| From           | Stellar Foundation <herb@southernheritagecc[.com>  |
+| Subject        |        Earn XLM by staking your assets             |
+| Date (UTC)     |          Sat 10 Sep 2022, 12:35:20                 |
+| Sending server | nmtao101.oxsus-vadesecure[.]net- 135.148.117[.]232 |
+| Origin IP      |                45.82.85.109                        |
+| X-Mailer       |     PHPMailer 6.1.7 (bulk-mail script)             |
+| Message-ID     |   ends @DESKTOP-RQ5VPH2 (a personal Windows PC)    |
+
+![Phishing log](01-phishing-log.png)
 
 ## Authentication results
 |       Check        |                Result                 |                              Meaning                                     |
@@ -27,8 +29,9 @@ compromised mailbox at a real organisation. Verdict: malicious.
 |      DMARC         |               none                    |                    The domain has no DMARC policy                        |
 | Microsoft verdict  |   compauth=fail, SCL 5, sent to Junk  |               Microsoft's filter agreed it was spam                      |
 
-![Header summary](01-header-summary.png)
-![Email route](02-email-route.png)
+![Header summary](02-header-summary.png)
+
+![Email route](03-email-route.png)
 
 ## Analysis
 1. **Brand impersonation:** the display name says Stellar Foundation, but the sender domain is southernheritagecc[.]com.
@@ -39,9 +42,9 @@ compromised mailbox at a real organisation. Verdict: malicious.
    
 3. **Hidden link:** the link was wrapped in a Google redirect (google.com/url?q=) to hide the real destination: hxxps://blog3.stellarnewsletter[.]org/, a lookalike of Stellar's real
    domain (stellar.org).
-
+ ![Hidden link log](04-hidden-link-log.png)
    
-4. **Reputation checks:** VirusTotal flagged stellarnewsletter.org as [ e.g. 3/94 ] vendors. AbuseIPDB: the sending IP has been reported [ e.g. 12 ] times.
+4. **Reputation checks:** VirusTotal flagged stellarnewsletter.org as [ 0/92 ] vendors. AbuseIPDB: the sending IP has been reported [2 ] times.
 
    
 5. **Site status:** urlscan.io (11 Oct 2026) could not resolve the domain. The scam site has been taken down.
@@ -54,7 +57,7 @@ compromised mailbox at a real organisation. Verdict: malicious.
 |     Type         |             Value (defanged)                    |
 |------------------|-------------------------------------------------|
 | Sender address   |       herb@southernheritagecc[.]com             |
-| Sending IP       |         135.148.117.232                     |
+| Sending IP       |         135.148.117[.]232                       |
 | Origin IP        |             45.82.85[.]109                      |
 | URL              |    hxxps://blog3.stellarnewsletter[.]org/       |
 | Subject          |      Earn XLM by staking your assets            |
@@ -78,7 +81,7 @@ T1566.002 - Phishing: Spearphishing Link
 - Block the domain even when the site is offline, as attackers may reuse it.
 
 ## Skills demonstrated
-Email header analysis (SPF, DKIM, DMARC), IP and domain reputation checks,
+- Email header analysis (SPF, DKIM, DMARC), IP and domain reputation checks,
 safe URL analysis, redirect decoding, IOC extraction, MITRE ATT&CK mapping,
 playbook-based response and escalation, clear case documentation.
 
