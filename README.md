@@ -1,5 +1,3 @@
-# Phishing-Investigation-Case-001
-
 # Phishing Investigation – Case 001: Fake Stellar Foundation crypto lure
 
 **Analyst:** Andre Patterson | **Sample:** sample_010.eml (public phishing_pot dataset)
