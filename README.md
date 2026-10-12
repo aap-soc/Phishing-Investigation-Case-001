@@ -19,7 +19,7 @@ compromised mailbox at a real organisation. Verdict: malicious.
 | X-Mailer       |     PHPMailer 6.1.7 (bulk-mail script)             |
 | Message-ID     |   ends @DESKTOP-RQ5VPH2 (a personal Windows PC)    |
 
-![Phishing log](01-phishing-log.png)
+![Phishing log](screenshots/01-phishing-log.png)
 
 ## Authentication results
 |       Check        |                Result                 |                              Meaning                                     |
@@ -29,9 +29,9 @@ compromised mailbox at a real organisation. Verdict: malicious.
 |      DMARC         |               none                    |                    The domain has no DMARC policy                        |
 | Microsoft verdict  |   compauth=fail, SCL 5, sent to Junk  |               Microsoft's filter agreed it was spam                      |
 
-![Header summary](02-header-summary.png)
+![Header summary](screenshots/02-header-summary.png)
 
-![Email route](03-email-route.png)
+![Email route](screenshots/03-email-route.png)
 
 ## Analysis
 1. **Brand impersonation:** the display name says Stellar Foundation, but the sender domain is southernheritagecc[.]com.
@@ -41,17 +41,16 @@ compromised mailbox at a real organisation. Verdict: malicious.
 
    
 3. **Hidden link:** the link was wrapped in a Google redirect (google.com/url?q=) to hide the real destination: hxxps://blog3.stellarnewsletter[.]org/, a lookalike of Stellar's real
-   domain (stellar.org).
- ![Hidden link log](04-hidden-link-log.png)
+   domain (stellar.org). ![Hidden link log](screenshots/04-hidden-link-log.png)
    
 4. **Reputation checks:** VirusTotal flagged stellarnewsletter.org as [ 0/92 ] vendors. AbuseIPDB: the sending IP has been reported [2 ] times.
 
    
 5. **Site status:** urlscan.io (11 Oct 2026) could not resolve the domain. The scam site has been taken down.
 
-![AbuseIPDB](05-abuseipdb.png)
-![VirusTotal](06-virustotal.png)
-![urlscan](07-urlscan.png)
+![AbuseIPDB](screenshots/05-abuseipdb.png)
+![VirusTotal](screenshots/06-virustotal.png)
+![urlscan](screenshots/07-urlscan.png)
 
 ## Indicators of compromise (IOCs)
 |     Type         |             Value (defanged)                    |
