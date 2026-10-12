@@ -48,7 +48,7 @@ compromised mailbox at a real organisation. Verdict: malicious.
    
 5. **Site status:** urlscan.io (11 Oct 2026) could not resolve the domain. The scam site has been taken down.
 
-![AbuseIPDB](screenshots/05-abuseipdb.png)
+![AbuseIPDB](screenshots/05-abuseipdp.png)
 ![VirusTotal](screenshots/06-virustotal.png)
 ![urlscan](screenshots/07-urlscan.png)
 
