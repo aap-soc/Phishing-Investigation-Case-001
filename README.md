@@ -12,17 +12,17 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Summary
-An email pretending to be from the Stellar Foundation offered rewards for"staking" XLM cryptocurrency. The sender's domain has no link to Stellar,
+An email pretending to be from the Stellar Foundation offered rewards for "staking" XLM cryptocurrency. The sender's domain has no link to Stellar,
 email authentication failed, and the link was hidden behind a Google redirect leading to a lookalike domain. It was most likely sent from a
 compromised mailbox at a real organisation. Verdict: malicious.
 
 ## Email details
 |    Field       |                  Value                             |
 |----------------|----------------------------------------------------|
-| From           | Stellar Foundation <herb@southernheritagecc[.com>  |
+| From           | Stellar Foundation <herb@southernheritagecc[.]com>  |
 | Subject        |        Earn XLM by staking your assets             |
 | Date (UTC)     |          Sat 10 Sep 2022, 12:35:20                 |
-| Sending server | nmtao101.oxsus-vadesecure[.]net- 135.148.117[.]232 |
+| Sending server | nmtao101.oxsus-vadesecure[.]net-135.148.117[.]232 |
 | Origin IP      |                45.82.85.109                        |
 | X-Mailer       |     PHPMailer 6.1.7 (bulk-mail script)             |
 | Message-ID     |   ends @DESKTOP-RQ5VPH2 (a personal Windows PC)    |
@@ -51,7 +51,7 @@ compromised mailbox at a real organisation. Verdict: malicious.
 3. **Hidden link:** the link was wrapped in a Google redirect (google.com/url?q=) to hide the real destination: hxxps://blog3.stellarnewsletter[.]org/, a lookalike of Stellar's real
    domain (stellar.org). ![Hidden link log](screenshots/04-hidden-link-log.png)
    
-4. **Reputation checks:** VirusTotal flagged stellarnewsletter.org as [ 0/92 ] vendors. AbuseIPDB: the sending IP has been reported [2 ] times.
+4. **Reputation checks:** VirusTotal flagged stellarnewsletter.org as 0/92 vendors. AbuseIPDB: the sending IP has been reported 2 times.
 
    
 5. **Site status:** urlscan.io (11 Oct 2026) could not resolve the domain. The scam site has been taken down.
