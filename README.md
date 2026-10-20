@@ -1,8 +1,16 @@
 # Phishing Investigation - Case 001: Fake Stellar Foundation crypto lure
 
-**Analyst:** Andre Patterson | **Sample:** sample_010.eml (public phishing_pot dataset)
-**Verdict:** Malicious | **Severity:** Medium | **Status:** Closed
+**Analyst:** Andre Patterson 
 
+**Sample:** sample_010.eml (public phishing_pot dataset)
+
+**Verdict:** Malicious 
+
+**Severity:** Medium 
+
+**Status:** Closed
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Summary
 An email pretending to be from the Stellar Foundation offered rewards for"staking" XLM cryptocurrency. The sender's domain has no link to Stellar,
 email authentication failed, and the link was hidden behind a Google redirect leading to a lookalike domain. It was most likely sent from a
