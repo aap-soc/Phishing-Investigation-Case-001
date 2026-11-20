@@ -51,7 +51,7 @@ compromised mailbox at a real organisation. Verdict: malicious.
 3. **Hidden link:** the link was wrapped in a Google redirect (google.com/url?q=) to hide the real destination: hxxps://blog3.stellarnewsletter[.]org/, a lookalike of Stellar's real
    domain (stellar.org). ![Hidden link log](screenshots/04-hidden-link-log.png)
    
-4. **Reputation checks:** VirusTotal flagged stellarnewsletter.org as 0/92 vendors. AbuseIPDB: the sending IP has been reported 2 times.
+4. **OSINT reputation checks:** VirusTotal flagged stellarnewsletter.org as 0/92 vendors. AbuseIPDB: the sending IP has been reported 2 times.
 
    
 5. **Site status:** urlscan.io (11 Oct 2026) could not resolve the domain. The scam site has been taken down.
@@ -91,6 +91,7 @@ T1566.002 - Phishing: Spearphishing Link
 - Email header analysis (SPF, DKIM, DMARC), IP and domain reputation checks,
 safe URL analysis, redirect decoding, IOC extraction, MITRE ATT&CK mapping,
 playbook-based response and escalation, clear case documentation.
+- OSINT(Open-Source Intelligence) using VirusTotal, AbuseIPDP and urlscan.io.
 
 > Evidence integrity: sample taken from a public phishing dataset; no
 > links were clicked; all URLs and IPs are defanged.
